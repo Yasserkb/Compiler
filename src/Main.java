@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner("E:/projects/Compilateur_Like_Pascal/src/net/mips/compiler/sc.txt");
+        Scanner sc = new Scanner("C:\\Users\\user\\Documents\\EMSI\\4IIR\\S3\\compilation 2\\TP3\\Compilation\\src\\net\\mips\\compiler\\sc.txt");
 
         while (sc.getCarCour()!=Scanner.EOF) {
             sc.symSuivant();
