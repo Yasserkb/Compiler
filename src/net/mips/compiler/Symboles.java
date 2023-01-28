@@ -4,6 +4,16 @@ public class Symboles {
     private Tokens token;
     private String nom="";
 
+    private int adresse;
+
+    public int getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(int adresse) {
+        this.adresse = adresse;
+    }
+
     private ClasseIdf classeIdf;
 
     public Symboles(Tokens token, String nom, ClasseIdf classeIdf) {

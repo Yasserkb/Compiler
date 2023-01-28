@@ -11,9 +11,20 @@ public class ScannerWS extends Scanner {
 
     private int val;
 
+    private int offset;
+
+    public int getOffset() {
+        return offset;
+    }
+
+
+    public void setOffset(int offset) {
+        this.offset = offset;
+    }
 
     public ScannerWS(String filename) throws FileNotFoundException {
         super(filename);
+        this.offset = -1;
     }
 
     @Override
@@ -36,6 +47,10 @@ public class ScannerWS extends Scanner {
    public void entrerSymb(ClasseIdf idf){
         this.getSymbCour().setClasseIdf(idf);
         this.tableSymb.add(this.getSymbCour());
+        if (this.getSymbCour().getClasseIdf().equals(ClasseIdf.CONSTANTE) || this.getSymbCour().getClasseIdf().equals(ClasseIdf.VARIALE)){
+            this.offset += 1;
+            this.tableSymb.get(this.tableSymb.size()-1).setAdresse(offset);
+        }
    }
 
     public void cherche_Symb(){
